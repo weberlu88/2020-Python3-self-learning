@@ -10,6 +10,7 @@ https://www.youtube.com/playlist?list=PL-g0fdC5RMboYEyt6QS2iLb_1m7QcgfHk&amp;fbc
   4. Set dictionary
   5. Condition
   6. Loop basic
+  7. Loop control
 
 ---
 
@@ -27,3 +28,12 @@ https://www.youtube.com/playlist?list=PL-g0fdC5RMboYEyt6QS2iLb_1m7QcgfHk&amp;fbc
 * 單一判斷：if ...
 * 雙向判斷：if ... else
 * 多條件判斷：if ... elif ... else ...
+
+**6. Loop basic**
+* for loop
+* while loop
+
+**7. Loop control**
+* break continue else
+* else區塊像是try-catch的finally區塊，迴圈結束前，必會執行else區塊
+* 但break之後不會執行else區塊
