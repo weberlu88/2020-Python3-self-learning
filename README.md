@@ -15,8 +15,10 @@ The youtube channel I follow:
   6. Loop basic
   7. Loop control
   8. Functon basic
-  9. Funtion args
+  9. FunCtion args
   10. Module
+  11. Package
+  12. File
 
 ---
 
