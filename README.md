@@ -11,6 +11,9 @@ https://www.youtube.com/playlist?list=PL-g0fdC5RMboYEyt6QS2iLb_1m7QcgfHk&amp;fbc
   5. Condition
   6. Loop basic
   7. Loop control
+  8. Functon basic
+  9. Funtion args
+  10. Module
 
 ---
 
@@ -37,3 +40,8 @@ https://www.youtube.com/playlist?list=PL-g0fdC5RMboYEyt6QS2iLb_1m7QcgfHk&amp;fbc
 * break continue else
 * else區塊像是try-catch的finally區塊，迴圈結束前，必會執行else區塊
 * 但break之後不會執行else區塊
+
+**9. Funtion args**
+* 預設參數值
+* 使用參數名稱對應
+* 無限(不定)參數資料(tuple)
