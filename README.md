@@ -50,3 +50,19 @@ The youtube channel I follow:
 * 預設參數值
 * 使用參數名稱對應
 * 無限(不定)參數資料(tuple)
+
+**12. File**
+* 讀寫檔案的3步流程：開檔 > 讀/寫 > 關檔。如果不關閉檔案會占用使用狀態，因為每個檔案一次只能一個被thread(?)讀取
+* 讀取檔案的方式：
+  * 文字格式：一行一行讀 `object = file.read()` `for line in object: ...`
+  * json格式：一次讀取全部 `data = json.load(fileObject)`
+  * csv格式：一次讀取全部
+  * open modes：https://stackabuse.com/file-handling-in-python/
+* 寫入檔案的方式：
+  * 文字格式：一次覆寫全部 `fileObject = file.write(String)`
+  * json格式：一次覆寫全部 `json.dump(data, fileObject)`
+  * csv格式：一次覆寫全部
+* 關閉檔案：`fileObject.close()`
+* 最佳實務方法：`with open(path, mode=) as fileObject:`
+  * 會自動且安全的關閉檔案
+  * 類似try-catch在try中的連線方法
