@@ -19,6 +19,7 @@ The youtube channel I follow:
   10. Module
   11. Package
   12. File
+  13. Random statistics
 
 ---
 
@@ -51,6 +52,8 @@ The youtube channel I follow:
 * 使用參數名稱對應
 * 無限(不定)參數資料(tuple)
 
+**10. Module**
+
 **12. File**
 * 讀寫檔案的3步流程：開檔 > 讀/寫 > 關檔。如果不關閉檔案會占用使用狀態，因為每個檔案一次只能一個被thread(?)讀取
 * 讀取檔案的方式：
@@ -66,3 +69,13 @@ The youtube channel I follow:
 * 最佳實務方法：`with open(path, mode=) as fileObject:`
   * 會自動且安全的關閉檔案
   * 類似try-catch在try中的連線方法
+
+**13. Random statistics**
+* Random
+  * `random.random()`
+  * `random.uniform(0.0, 1.0)`
+  * `random.normalvariate(100, 10)`
+* Statistics
+  * `statistics.mean(list)`
+  * `statistics.median(list)`
+  * `statistics.stdev(list)`
