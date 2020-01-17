@@ -81,3 +81,21 @@ The youtube channel I follow:
   * 計算中位數：median()
   * 計算標準差：stdev()
 
+**14. API request**
+* 網路連線程式，以 HTTP 通訊協定為例
+  * 使用 urllib.request 模組
+  * 使用 urlopen(網址) 連線網址
+  * 使用 read() 讀取資料
+  * 使用 decode("utf-8")  處理中文資料
+  * 使用 json 模組，解讀 json 資料格式
+
+* 公開資料串接
+  * 使用台北市政府公開資料 (http://data.taipei/)
+  * 搜尋並取得資料的串接網址 (API)
+  * 測試串接網址，觀察資料格式
+  * 撰寫程式，自動連線並且擷取想要的資料
+
+* 儲存資料到檔案中
+  * 使用寫入模式開啟檔案
+  * 使用 utf-8 編碼處理中文資料
+
