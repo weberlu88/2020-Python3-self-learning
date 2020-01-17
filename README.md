@@ -76,6 +76,7 @@ The youtube channel I follow:
   * 隨機調換順序：shuffle()
   * 取得隨機亂數：random()、uniform()
   * 取得常態分配亂數：normalvariate()
+  
 * Statistics 模組
   * 計算平均數：mean()
   * 計算中位數：median()
