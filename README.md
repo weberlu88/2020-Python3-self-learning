@@ -70,12 +70,14 @@ The youtube channel I follow:
   * 會自動且安全的關閉檔案
   * 類似try-catch在try中的連線方法
 
-**13. Random statistics**
-* Random
-  * `random.random()`
-  * `random.uniform(0.0, 1.0)`
-  * `random.normalvariate(100, 10)`
-* Statistics
-  * `statistics.mean(list)`
-  * `statistics.median(list)`
-  * `statistics.stdev(list)`
+**13. Random-statistics**
+* Random 模組
+  * 隨機選取：choice()、sample()
+  * 隨機調換順序：shuffle()
+  * 取得隨機亂數：random()、uniform()
+  * 取得常態分配亂數：normalvariate()
+* Statistics 模組
+  * 計算平均數：mean()
+  * 計算中位數：median()
+  * 計算標準差：stdev()
+
