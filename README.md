@@ -83,6 +83,9 @@ The youtube channel I follow:
   * 計算標準差：stdev()
 
 **14. API request**
+* https://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-urllib3-and-requests-modul?fbclid=IwAR0tv3zR2Dx3VzP2VUyWqpfyEKVNgra_VATpJb8OLBJ0TTXPjP5uMyJvYe0
+* urllib.request module document: https://docs.python.org/3/library/urllib.request.html
+* requests module document:https://requests.readthedocs.io/en/master/
 * 網路連線程式，以 HTTP 通訊協定為例
   * 使用 urllib.request 模組
   * 使用 urlopen(網址) 連線網址
@@ -100,3 +103,7 @@ The youtube channel I follow:
   * 使用寫入模式開啟檔案
   * 使用 utf-8 編碼處理中文資料
 
+**15. Class**
+* 使用 class 建立類別
+* 建立類別的屬性 ( 封裝在類別中的變數或函式 )
+* 使用類別的基本語法：類別名稱.屬性名稱 > 直接 call class 的屬性
