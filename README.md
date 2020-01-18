@@ -84,8 +84,8 @@ The youtube channel I follow:
 
 **14. API request**
 * https://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-urllib3-and-requests-modul?fbclid=IwAR0tv3zR2Dx3VzP2VUyWqpfyEKVNgra_VATpJb8OLBJ0TTXPjP5uMyJvYe0
-* urllib.request module document: https://docs.python.org/3/library/urllib.request.html
-* requests module document:https://requests.readthedocs.io/en/master/
+* **urllib.request** module document: https://docs.python.org/3/library/urllib.request.html
+* **requests** module document: https://requests.readthedocs.io/en/master/
 * 網路連線程式，以 HTTP 通訊協定為例
   * 使用 urllib.request 模組
   * 使用 urlopen(網址) 連線網址
