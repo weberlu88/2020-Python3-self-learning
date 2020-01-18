@@ -20,6 +20,10 @@ The youtube channel I follow:
   11. Package
   12. File
   13. Random statistics
+  14. Web api request
+  15. Class
+  16. Instance objects 1
+  17. Instance objects 2
 
 ---
 
@@ -82,7 +86,7 @@ The youtube channel I follow:
   * 計算中位數：median()
   * 計算標準差：stdev()
 
-**14. API request**
+**14. Web API request**
 * https://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-urllib3-and-requests-modul?fbclid=IwAR0tv3zR2Dx3VzP2VUyWqpfyEKVNgra_VATpJb8OLBJ0TTXPjP5uMyJvYe0
 * **urllib.request** module document: https://docs.python.org/3/library/urllib.request.html
 * **requests** module document: https://requests.readthedocs.io/en/master/
