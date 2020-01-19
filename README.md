@@ -121,3 +121,8 @@ The youtube channel I follow:
 * 操作實體物件屬性
   * 基本語法：`object.屬性名稱`
   * 相同類別定義下，不同的實體物件操作
+
+17. **Instance objects 2**
+* 物件中 methods 的宣告，範例有：
+  * Point 的 show() distance()
+  * File 的 open() read()
