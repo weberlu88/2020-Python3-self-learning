@@ -22,8 +22,8 @@ The youtube channel I follow:
   13. Random statistics
   14. Web api request
   15. Class
-  16. Instance objects 1
-  17. Instance objects 2
+  16. Instance objects 1 - constructor
+  17. Instance objects 2 - methods
 
 ---
 
