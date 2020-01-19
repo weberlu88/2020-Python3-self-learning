@@ -111,3 +111,13 @@ The youtube channel I follow:
 * 使用 class 建立類別
 * 建立類別的屬性 ( 封裝在類別中的變數或函式 )
 * 使用類別的基本語法：類別名稱.屬性名稱 > 直接 call class 的屬性
+
+16. **Instance objects 1**
+* 利用類別定義產生實體物件 (Instance Objects)
+  * 建立初始化函式`__init__`、使用 self
+  * 建立實體物件 (new an object)
+  * 在初始化函式中，代入參數
+
+* 操作實體物件屬性
+  * 基本語法：`object.屬性名稱`
+  * 相同類別定義下，不同的實體物件操作
