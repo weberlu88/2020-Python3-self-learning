@@ -112,7 +112,7 @@ The youtube channel I follow:
 * 建立類別的屬性 ( 封裝在類別中的變數或函式 )
 * 使用類別的基本語法：類別名稱.屬性名稱 > 直接 call class 的屬性
 
-16. **Instance objects 1**
+**16. Instance objects 1**
 * 利用類別定義產生實體物件 (Instance Objects)
   * 建立初始化函式`__init__`、使用 self
   * 建立實體物件 (new an object)
@@ -122,7 +122,7 @@ The youtube channel I follow:
   * 基本語法：`object.屬性名稱`
   * 相同類別定義下，不同的實體物件操作
 
-17. **Instance objects 2**
+**17. Instance objects 2**
 * 物件中 methods 的宣告，範例有：
   * Point 的 show() distance()
   * File 的 open() read()
