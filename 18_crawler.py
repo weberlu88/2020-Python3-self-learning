@@ -1,4 +1,4 @@
-'''Step.1 '''
+'''Step.1 抓取 PTT 電影版的網頁原始碼 (HTML file)'''
 # 抓取 PTT 電影版的網頁原始碼 (HTML file)
 import urllib.request as req
 
@@ -16,8 +16,7 @@ with req.urlopen(request) as response:
 # print the HTML source code
 # print(html)
 
-'''Step.2'''
-# 透過 bs4 解析網頁原始碼，取得每篇文章的標題
+'''Step.2 透過 bs4 解析網頁原始碼，取得每篇文章的標題'''
 # bs4 docs: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
 # 標題的 div 長這樣：div > a > string
