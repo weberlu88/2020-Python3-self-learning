@@ -19,15 +19,6 @@ with req.urlopen(request) as response:
 '''Step.2 透過 bs4 解析網頁原始碼，取得每篇文章的標題'''
 # bs4 docs: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
-# 標題的 div 長這樣：div > a > string
-# 被刪除的長這樣：div > string
-# <div class="title">
-# 	<a href="/bbs/movie/M.1579650163.A.BDA.html">[討論] 誠實預告:小丑2019</a>
-# </div>
-# <div class="title">
-# 	(本文已被刪除) [Lian68]
-# </div>
-
 import bs4 
 
 soup = bs4.BeautifulSoup(html, "html.parser")
@@ -38,3 +29,12 @@ title_list = soup.find_all("div", class_ = "title")
 for title in title_list:
     if title.a != None: # includes <a> means post exists
         print(title.a.string)
+
+# 標題的 div 長這樣：div > a > string
+# 被刪除的長這樣：div > string
+# <div class="title">
+# 	<a href="/bbs/movie/M.1579650163.A.BDA.html">[討論] 誠實預告:小丑2019</a>
+# </div>
+# <div class="title">
+# 	(本文已被刪除) [Lian68]
+# </div>
