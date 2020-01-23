@@ -1,25 +1,60 @@
-# .r-ent 貼文總覽, return: list() of post_html
-def get_post(html):
-    return
+import urllib.request as req
+import bs4 
+import re # Regular Expression
+
+# .r-ent 貼文總覽, return: list() of post_html objects
+def get_post_list(soup):
+    post_list = soup.find_all("div", class_ = "r-ent")
+    return post_list
 
 # .nrec 推文數量
 def get_push(post_html):
-    return 
+    pushes = 0
+    div = post_html.find("div", class_ = "nrec") # select <div> with .nrec 
+    if div.span != None: # includes <span> means pushes != 0
+        pushes = div.span.string
+    return pushes
 
 # .author 作者名稱
 def get_author(post_html):
-    return
+    div = post_html.find("div", class_ = "author")
+    if div.string != "-":
+        return div.string
+    else:
+        div = post_html.find("div", class_ = "title")
+        deleted_title = div.string
+        # ... [author name] > author name
+        author = deleted_title[deleted_title.find('[')+1 : deleted_title.find(']')]
+        return author
+    
 
-# .title 分類 + 文章標題
+# .title 分類 + 文章標題。if no title > post nonexist
 def get_title(post_html):
-    return
-
+    div = post_html.find("div", class_ = "title")
+    if div.a != None: # includes <a> means post exists
+        return div.a.string
+    else:
+        return None
+    
 # .date 日期
 def get_date(post_html):
-    return
+    div = post_html.find("div", class_ = "date")
+    return div.string.strip() # remove leading and ending spaces
 
 # 將爬到的標題寫進csv，並print出來
-def write_result():
+def write_result(post_list):
+    for post in post_list:
+        push = get_push(post)
+        print("push: ", push)
+
+        title = get_title(post)
+        print("title: ", title)
+
+        author = get_author(post)
+        print("author: ", author)
+
+        date = get_date(post)
+        print("date: ", date)
     return
 
 # This function get all titles in a signle page.
@@ -34,18 +69,23 @@ def getData(url):
     })
     with req.urlopen(request) as response:
         html = response.read().decode("utf-8")
-    # print(html)
+
+    print(">>> end of requset")
 
     # Step.2 透過 bs4 解析網頁原始碼，取得每篇文章的標題
     soup = bs4.BeautifulSoup(html, "html.parser")
-    # print(soup.title.string)
+    post_list = get_post_list(soup)
+    write_result(post_list)
 
+    # print(soup.find_all("div", class_ = "r-ent"))
+
+    '''
     # select all class = "title" 的 div 標籤
     title_list = soup.find_all("div", class_ = "title")
     for title in title_list:
         if title.a != None: # includes <a> means post exists
             print(title.a.string)
-
+    '''
     # Step.3 抓取上一頁的連結並 return
     next_link = soup.find("a", string = "‹ 上頁") # 搜尋內文是"‹ 上頁"的<a>
     return next_link["href"]
@@ -55,19 +95,20 @@ def main():
     pageURL = "https://www.ptt.cc/bbs/Gossiping/index.html"
     
     count = 0
-    while count < 3:
+    while count < 8:
         # getData() : /bbs/Gossiping/index39154.html
         pageURL = "https://www.ptt.cc" + getData(pageURL)
-        print(pageURL)
+        print(pageURL + "\n")
         count += 1
     return
 
 if __name__ == "__main__":
+    main()
     pass
 
 '''
 <div class="r-ent">
-    <div class="nrec"><span class="hl f2">3</span></div>
+    <div class="nrec"><span class="hl f2">3</span></div> # 沒有推文: <div class="nrec"></div>
     <div class="title">
         <a href="/bbs/Gossiping/M.1579684896.A.B64.html">Re: [問卦] 我大膽預言</a>
     </div>
