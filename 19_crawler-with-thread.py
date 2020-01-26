@@ -3,6 +3,7 @@ import bs4
 import re # Regular Expression
 import threading
 import time
+import statistics
 
 '''
 爬蟲八掛版的文章 Programming Design:
@@ -218,14 +219,22 @@ def getData(url):
 
 # main codes
 def main():
+    time_list = []
     pageURL = "https://www.ptt.cc/bbs/Gossiping/index.html"
     
     count = 0
     while count < 1:
+        tStart = time.time() # 計時開始
+
         # getData() : /bbs/Gossiping/index39154.html
         pageURL = "https://www.ptt.cc" + getData(pageURL)
         print(pageURL + "\n")
+
+        tEnd = time.time() # 計時結束
+        time_list.append(tEnd - tStart)
         count += 1
+
+    print("Average time per page: ", statistics.mean(time_list))
     return
 
 if __name__ == "__main__":
