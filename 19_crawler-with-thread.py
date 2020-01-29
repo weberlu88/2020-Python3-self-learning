@@ -4,6 +4,7 @@ import re # Regular Expression
 import threading
 import time
 import statistics
+import csv
 
 '''
 爬蟲八掛版的文章 Programming Design:
@@ -158,22 +159,35 @@ def get_post_detail(post):
 
 # 將爬到的標題寫進csv，並print出來
 def write_result(post_list):
-    for post in post_list:
 
-        # 取出物件內的變數
-        title = post.title
-        author = post.author
-        push = post.push
-        date = post.date
-        content = post.content
-        url =  post.url
+    with open('files/ptt-gossiping.csv', 'w', newline='', encoding='utf-8') as csvfile:
 
-        print("\ntitle: ", title)
-        print("push: ", push)
-        print("author: ", author)
-        print("date: ", date)
-        print("url: ", url)
-        # print("content: ", content)
+        # 建立 CSV 檔寫入器
+        writer = csv.writer(csvfile)
+        csv_title = ["push", "title", "author", "date", "url", "content"]
+        writer.writerow(csv_title)
+
+
+        for post in post_list:
+
+            # 取出物件內的變數
+            title = post.title
+            author = post.author
+            push = post.push
+            date = post.date
+            content = post.content
+            url =  post.url
+
+            print("\ntitle: ", title)
+            print("push: ", push)
+            print("author: ", author)
+            print("date: ", date)
+            print("url: ", url)
+            # print("content: ", content)
+            
+            # 寫進 scv file
+            row = [push, title, author, date, url, content]
+            writer.writerow(row)
     return
 
 # This function get all titles in a signle page.
